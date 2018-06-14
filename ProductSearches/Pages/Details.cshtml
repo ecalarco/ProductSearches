@@ -1,0 +1,71 @@
+@page
+@model ProductSearches.Pages.Products.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.ProductID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.ProductID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.LastSold)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.LastSold)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.ShelfLife)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.ShelfLife)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.Department)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.Department)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.Unit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.Unit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.XFor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.XFor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.Cost)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.Cost)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Product.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

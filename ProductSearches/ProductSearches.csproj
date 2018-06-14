@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Pages\Products\Index.cshtml" />
+    <Content Remove="Pages\Products\Delete.cshtml" />
+    <Content Remove="Pages\Products\Details.cshtml" />
+    <Content Remove="Pages\Products\Edit.cshtml" />
+    <Content Remove="Pages\Products\Create.cshtml" />
+    <Content Remove="Pages\Create.cshtml" />
+    <Content Remove="Pages\Delete.cshtml" />
+    <Content Remove="Pages\Details.cshtml" />
+    <Content Remove="Pages\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pages\Create.cshtml" />
+    <None Include="Pages\Delete.cshtml" />
+    <None Include="Pages\Details.cshtml" />
+    <None Include="Pages\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Pages\Products\Create.cshtml.cs" />
+    <Compile Remove="Pages\Products\Edit.cshtml.cs" />
+    <Compile Remove="Pages\Products\Details.cshtml.cs" />
+    <Compile Remove="Pages\Products\Delete.cshtml.cs" />
+    <Compile Remove="Pages\Products\Index.cshtml.cs" />
+  </ItemGroup>
+</Project>

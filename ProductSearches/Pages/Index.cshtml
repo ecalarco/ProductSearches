@@ -1,0 +1,163 @@
+@page
+@model ProductSearches.Pages.Products.IndexModel
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+<form>
+    <p>
+        Search:<br /> 
+        <table>
+            <tr>
+                <td>
+                    ID:
+                </td>
+                <td>
+                    <input type="text" name="SearchID">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Description:
+                </td>
+                <td>
+                    <input type="text" name="SearchDescription">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Last Sold:
+                </td>
+                <td>
+                    <input type="text" name="SearchLastSold">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Shelf Life:
+                </td>
+                <td>
+                    <input type="text" name="SearchShelfLife">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Department:
+                </td>
+                <td>
+                    <input type="text" name="SearchDepartment">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Price:
+                </td>
+                <td>
+                    <input type="text" name="SearchPrice">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Unit:
+                </td>
+                <td>
+                    <input type="text" name="SearchUnit">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    XFor:
+                </td>
+                <td>
+                    <input type="text" name="SearchXFor">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Cost:
+                </td>
+                <td>
+                    <input type="text" name="SearchCost">
+                </td>
+            </tr>            
+        </table>
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].ProductID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].LastSold)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].ShelfLife)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].Department)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].Unit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].XFor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].Cost)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Product) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastSold)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShelfLife)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Unit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.XFor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cost)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
